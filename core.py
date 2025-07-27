@@ -91,6 +91,6 @@ class CrossEntropyLoss:
         true_labels = self.true_labels_cache
         num_samples = predictions.shape[0]
 
-        dX_softmax_input = (
-                                       predictions - true_labels) / num_samples  # Do more research on why Softmax only works with CrossEntropyLoss
+        # Do more research on why Softmax only works with CrossEntropyLoss
+        dX_softmax_input = (predictions - true_labels) / num_samples
         return dX_softmax_input
