@@ -67,13 +67,13 @@ Week 4: Positional Encoding & Normalization & FFN
 Phase 2: Assembling the Model & Basic Training (Weeks 5–8)
 
 Week 5: Decoder Block Assembly & Mini Language Model
-- [ ] Day 1–3: Full Decoder Block (Masked MHA + Add&Norm + FFN + Add&Norm)
-  - [ ] Validate forward pass end-to-end
-- [ ] Day 4–5: Simple Language Model (NumPy)
-  - [ ] Stack N decoder blocks
-  - [ ] Final Linear projection -> vocab
-  - [ ] Softmax for next-token probabilities
-  - [ ] Verify forward pass on a toy batch
+- [x] Day 1–3: Full Decoder Block (Masked MHA + Add&Norm + FFN + Add&Norm)
+  - [x] Validate forward pass end-to-end
+- [x] Day 4–5: Simple Language Model (NumPy)
+  - [x] Stack N decoder blocks
+  - [x] Final Linear projection -> vocab
+  - [x] Softmax for next-token probabilities
+  - [x] Verify forward pass on a toy batch
 - [ ] Day 6–7: Framework Introduction (PyTorch recommended)
   - [ ] Learn torch.Tensor, nn.Module, nn.Parameter, optim
   - [ ] Re-implement 2-layer NN in PyTorch
