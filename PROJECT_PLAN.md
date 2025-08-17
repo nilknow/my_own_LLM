@@ -74,9 +74,9 @@ Week 5: Decoder Block Assembly & Mini Language Model
   - [x] Final Linear projection -> vocab
   - [x] Softmax for next-token probabilities
   - [x] Verify forward pass on a toy batch
-- [ ] Day 6–7: Framework Introduction (PyTorch recommended)
-  - [ ] Learn torch.Tensor, nn.Module, nn.Parameter, optim
-  - [ ] Re-implement 2-layer NN in PyTorch
+- [x] Day 6–7: Framework Introduction (PyTorch recommended)
+  - [x] Learn torch.Tensor, nn.Module, nn.Parameter, optim
+  - [x] Re-implement 2-layer NN in PyTorch
 
 Week 6: Port Core Components to PyTorch
 - [ ] Day 1–5: Convert components to PyTorch nn.Modules
