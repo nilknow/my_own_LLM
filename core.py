@@ -42,9 +42,11 @@ class Softmax:
         self.output_cache = None
 
     def forward(self, X):
-        exp_X = np.exp(X - np.max(X, axis=1, keepdims=True))  # very interesting
-        output = exp_X / np.sum(exp_X, axis=1, keepdims=True)
-        self.output_cache = output  # 缓存输出
+        # Apply softmax along the last axis so it works for both 2-D (batch, classes)
+        # and 3-D tensors such as (batch, seq_len, vocab).
+        exp_X = np.exp(X - np.max(X, axis=-1, keepdims=True))
+        output = exp_X / np.sum(exp_X, axis=-1, keepdims=True)
+        self.output_cache = output
         return output
 
     def backward(self, dY):

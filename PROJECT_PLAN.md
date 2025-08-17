@@ -79,9 +79,9 @@ Week 5: Decoder Block Assembly & Mini Language Model
   - [x] Re-implement 2-layer NN in PyTorch
 
 Week 6: Port Core Components to PyTorch
-- [ ] Day 1–5: Convert components to PyTorch nn.Modules
-  - [ ] Embedding, Linear, LayerNorm
-  - [ ] MultiHeadAttention, PositionalEncoding, FeedForward
+- [x] Day 1–5: Convert components to PyTorch nn.Modules
+  - [x] Embedding, Linear, LayerNorm
+  - [x] MultiHeadAttention, PositionalEncoding, FeedForward
 - [ ] Day 6–7: Full Mini-GPT (Decoder-only) in PyTorch
   - [ ] Assemble end-to-end module
 
