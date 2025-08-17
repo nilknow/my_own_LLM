@@ -1,9 +1,9 @@
 import numpy as np
 import os
 
-from ai.core import LinearLayer, Softmax, CrossEntropyLoss
-from ai.text.CharTokenizer import CharTokenizer
-from ai.text.EmbeddingLayer import EmbeddingLayer
+from core import LinearLayer, Softmax, CrossEntropyLoss
+from text.CharTokenizer import CharTokenizer
+from text.EmbeddingLayer import EmbeddingLayer
 
 
 class BigramModel:

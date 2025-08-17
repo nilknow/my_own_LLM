@@ -1,6 +1,6 @@
 import numpy as np
 
-from ai.core import Softmax
+from core import Softmax
 
 
 class SingleHeadAttention:
@@ -27,7 +27,13 @@ class SingleHeadAttention:
         # scores: (batch, seq_len, seq_len)
         scores = np.matmul(Q, K.transpose(0, 2, 1)) / np.sqrt(self.d_model)
 
-        if mask is not None:
+        # Apply causal mask (prevent attending to future positions)
+        if mask is None:
+            seq_len = scores.shape[-1]
+            causal_mask = np.triu(np.ones((seq_len, seq_len)), k=1).astype(bool)
+            scores = np.where(causal_mask, -1e9, scores)
+        else:
+            # User-provided mask (1 = keep, 0 = mask)
             scores = np.where(mask == 0, -1e9, scores)
 
         attention_weights = self.softmax.forward(scores)
